@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style> 
+
+body {
+    background-color: aqua;
+}
+
+h2 {
+    align-content: center;
+}
+</style>
+
+<h1>Welcome, {$cuser}</h1>
+
+<h2 style="text-align:center;">{$msg}</h2> <br>
+
+
+
+{foreach $links as $link}
+<h2 style="text-align:center;">{$link}</h2>
+{/foreach}
+
+
+
+<a href="logout.php">logout</a>
+
+<form action="homepage.php" method="POST" style="text-align:center;">
+    <div>
+        <label><i><h2>Add Your Video here:</i></h2></label>
+        <input name="video" type="text">
+    </div>
+    <div>
+        <button type="submit">
+            <h1>Submit</h1>
+        </button>
+    </div>
+</form>
+
+
+
+</html>
